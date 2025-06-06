@@ -66,3 +66,16 @@ function submitQuiz() {
   result.innerText = We recommend you visit: ${destination};
 }
 
+function toggleDarkMode() {
+  document.body.classList.toggle('dark');
+  const isDark = document.body.classList.contains('dark');
+  localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+}
+
+// Load dark mode preference on page load
+window.onload = function () {
+  if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark');
+    document.getElementById('toggleDark').checked = true;
+  }
+};

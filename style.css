@@ -131,21 +131,4 @@ body.dark header,
 body.dark footer {
   background-color: #1f1f1f;
 }
-body.dark .section,
-body.dark .quiz-box,
-body.dark .blog-card,
-body.dark .destination-grid div {
-  background-color: #2a2a2a;
-  color: #f1f1f1;
-}
-body.dark form input,
-body.dark form textarea {
-  background-color: #3a3a3a;
-  color: #f1f1f1;
-}
-body.dark .gallery-grid img {
-  border: 2px solid #fff;
-}
-}
-
 

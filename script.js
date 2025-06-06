@@ -41,6 +41,30 @@ for (let i = 1; i <= 20; i++) {
   card.innerHTML = `<h3>Adventure #${i}</h3><p>Join us as we travel to a new destination filled with wonder and mystery.</p>`;
   blogList.appendChild(card);
 }
+function submitQuiz() {
+  const type = document.getElementById('vacationType').value;
+  const result = document.getElementById('quizResult');
+  let destination = '';
+
+  switch (type) {
+    case 'beach':
+      destination = 'Bali or Maldives';
+      break;
+    case 'mountain':
+      destination = 'Swiss Alps or Himachal Pradesh';
+      break;
+    case 'city':
+      destination = 'New York or Tokyo';
+      break;
+    case 'adventure':
+      destination = 'Patagonia or New Zealand';
+      break;
+    default:
+      destination = 'Please select a valid option.';
+  }
+
+  result.innerText = We recommend you visit: ${destination};
+}
 
 function toggleDarkMode() {
   document.body.classList.toggle('dark');

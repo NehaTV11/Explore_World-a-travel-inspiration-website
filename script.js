@@ -41,26 +41,4 @@ for (let i = 1; i <= 20; i++) {
   card.innerHTML = `<h3>Adventure #${i}</h3><p>Join us as we travel to a new destination filled with wonder and mystery.</p>`;
   blogList.appendChild(card);
 }
-// Sample Events
-const events = [
-  { title: "Bali Yoga Retreat", date: "Aug 12, 2025" },
-  { title: "Swiss Hiking Tour", date: "Sep 5, 2025" },
-  { title: "Tokyo Lantern Festival", date: "Oct 15, 2025" },
-  { title: "Sahara Desert Camping", date: "Nov 20, 2025" },
-  { title: "New York Winter Bash", date: "Dec 31, 2025" },
-];
 
-// Populate Events Carousel
-const carousel = document.getElementById('eventCarousel');
-events.forEach(event => {
-  const card = document.createElement('div');
-  card.className = 'event-card';
-  card.innerHTML = <h4>${event.title}</h4><p>${event.date}</p>;
-  carousel.appendChild(card);
-});
-
-// Carousel Scroll Buttons
-function scrollCarousel(direction) {
-  const scrollAmount = 300;
-  carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-}

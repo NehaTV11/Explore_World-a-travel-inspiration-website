@@ -115,7 +115,21 @@ footer {
   background-color: #222;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 20px;/* Dark Mode Toggle */
+.dark-mode-toggle {
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Dark Theme Styles */
+body.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+body.dark header,
+body.dark footer {
+  background-color: #1f1f1f;
 }
 /* Events Carousel */
 .carousel-container {

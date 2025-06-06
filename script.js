@@ -42,3 +42,16 @@ for (let i = 1; i <= 20; i++) {
   blogList.appendChild(card);
 }
 
+function toggleDarkMode() {
+  document.body.classList.toggle('dark');
+  const isDark = document.body.classList.contains('dark');
+  localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+}
+
+// Load dark mode preference on page load
+window.onload = function () {
+  if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark');
+    document.getElementById('toggleDark').checked = true;
+  }
+};
